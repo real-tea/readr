@@ -25,6 +25,11 @@ export default function Home({posts} : any) {
     <div className="min-h-full bg-main-grad">
       <Head>
         <title>Readr</title>
+
+        <meta
+          name="description"
+          content="Rich long from essays articles and blogs"
+          key="desc"/>
       </Head>
 
     </div>
