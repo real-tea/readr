@@ -68,6 +68,15 @@ export default function Home({posts} : any) {
         ))}
       </div>
 
+      <div className="w-3/4 flex flex-col mx-auto sm:ml-32">
+        <div className="mt-10 flex flex-col gap-9 mb-12 text-mygrey">
+              {/* {links.map((link:any)=>(
+                <PostCard/>
+                ))} */}
+        </div>
+
+      </div>
+
     </div>
     )
 }
