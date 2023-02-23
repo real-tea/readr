@@ -10,7 +10,7 @@ const boxVariant = {
 }
 
 
-const Postcard = ( props : PostCardProps) => {
+const PostCard = ( props : PostCardProps) => {
 
     const control = useAnimation();
     const [ref , inView] = useInView();
@@ -49,4 +49,4 @@ const Postcard = ( props : PostCardProps) => {
   )
 }
 
-export default Postcard
+export default PostCard

@@ -4,7 +4,7 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { useState } from 'react'
 
-import Postcard from '../components/Postcard';
+import PostCard from '../components/PostCard';
 import useCategories from '../hooks/useCategories';
 
 
@@ -74,11 +74,32 @@ export default function Home({posts} : any) {
 
       <div className="w-3/4 flex flex-col mx-auto sm:ml-32">
         <div className="mt-10 flex flex-col gap-9 mb-12 text-mygrey">
-              
+              {links.map((link :  any)=>(
+                <PostCard
+                key = {link?.id}
+                title={link?.properties.Name?.title[0]?.plain_text}
+                author={link?.properties.Author?.rich_text[0]?.plain_text}
+                url={link?.properties.PostLink?.rich_text[0]?.plain_text}
+                category={link?.properties.Category.multi_select}
+                />
+              ))
+
+              }
         </div>
 
       </div>
 
     </div>
     )
+}
+
+
+export async function getServerSideProps(){
+  let { results } = await posts();
+
+  return {
+    props : {
+      posts : results;
+    }
+  }
 }
