@@ -4,6 +4,10 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { useState } from 'react'
 
+import Postcard from '../components/Postcard';
+import useCategories from '../hooks/useCategories';
+
+
 const inter = Inter({ subsets: ['latin'] })
 
 const categories : string[] = [
@@ -20,7 +24,7 @@ const categories : string[] = [
 export default function Home({posts} : any) {
 
   const [category , setCategory] = useState(0);
-  // const links = useCategories(posts , categories , category);
+  const links = useCategories(posts , categories , category);
 
   return (
     <div className="min-h-full bg-main-grad">
@@ -70,9 +74,7 @@ export default function Home({posts} : any) {
 
       <div className="w-3/4 flex flex-col mx-auto sm:ml-32">
         <div className="mt-10 flex flex-col gap-9 mb-12 text-mygrey">
-              {/* {links.map((link:any)=>(
-                <PostCard/>
-                ))} */}
+              
         </div>
 
       </div>
