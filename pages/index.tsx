@@ -14,7 +14,7 @@ const categories: string[] = [
   "Mind",
   "Health",
   "World",
-  "Me"
+  "Me "
 ];
 
 export default function Home({ posts }: any) {

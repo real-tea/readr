@@ -11,7 +11,7 @@ module.exports = {
         mygreylight: "#636263",
       },
         Family: {
-        spectral: ["Spectral", "serif"],
+        spectral: ['Glook', 'serif' ],
       },
     },
     backgroundImage: {
