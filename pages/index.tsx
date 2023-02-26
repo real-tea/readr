@@ -14,7 +14,7 @@ const categories: string[] = [
   "Mind",
   "Health",
   "World",
-  "Me "
+  "Me"
 ];
 
 export default function Home({ posts }: any) {
@@ -71,7 +71,7 @@ export default function Home({ posts }: any) {
       <div className="w-3/4 flex flex-col mx-auto sm:ml-32">
         
         <div className="mt-10 flex flex-col gap-9 mb-12 text-mygrey">
-        {console.log(links)}
+        {/* {console.log(links)} */}
           {links.map((link: any) => (
             <PostCard
               title={link?.properties.title.rich_text[0]?.plain_text}

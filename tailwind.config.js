@@ -10,8 +10,8 @@ module.exports = {
         mygrey: "#4D4C4E",
         mygreylight: "#636263",
       },
-        Family: {
-        spectral: ['Glook', 'serif' ],
+        fontFamily: {
+        spectral: ['Lora' , 'serif' ],
       },
     },
     backgroundImage: {
